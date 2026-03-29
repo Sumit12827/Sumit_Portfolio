@@ -41,15 +41,17 @@ export function LiquidButton({
       className={cn("relative", liquidbuttonVariants({ variant, size, className }))}
       {...props}
     >
-      <div className="absolute top-0 left-0 z-0 h-full w-full rounded-full
+      <div className="absolute top-0 left-0 z-0 h-full w-full rounded-[inherit]
           shadow-[0_0_6px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3px_rgba(0,0,0,0.9),inset_-3px_-3px_0.5px_-3px_rgba(0,0,0,0.85),inset_0_0_6px_6px_rgba(0,0,0,0.12)]
           dark:shadow-[0_0_8px_rgba(0,0,0,0.03),0_2px_6px_rgba(0,0,0,0.08),inset_3px_3px_0.5px_-3.5px_rgba(255,255,255,0.09),inset_-3px_-3px_0.5px_-3.5px_rgba(255,255,255,0.85),inset_0_0_6px_6px_rgba(255,255,255,0.12)]
           transition-all" />
       <div
-        className="absolute top-0 left-0 isolate -z-10 h-full w-full overflow-hidden rounded-md"
+        className="absolute top-0 left-0 isolate -z-10 h-full w-full rounded-[inherit]"
         style={{ backdropFilter: 'url("#container-glass")' }}
       />
-      <div className="pointer-events-none z-10">{children}</div>
+      <div className="pointer-events-none z-10 flex items-center justify-center gap-[inherit]">
+        {children}
+      </div>
       <svg className="hidden">
         <defs>
           <filter id="container-glass" x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">

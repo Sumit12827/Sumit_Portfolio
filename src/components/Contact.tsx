@@ -19,8 +19,8 @@ export const ContactSection = () => (
 
       <a href="/resume.pdf" download className="inline-block mb-12">
         <LiquidButton size="xl" className="gap-3 text-base px-10">
-          <Download className="w-5 h-5" />
           Download Resume
+          <Download className="w-5 h-5" />
         </LiquidButton>
       </a>
     </motion.div>
