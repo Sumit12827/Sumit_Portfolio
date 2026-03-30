@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import AutoScroll from "embla-carousel-auto-scroll";
+import Image from "next/image";
 
 import {
   Carousel,
@@ -111,9 +112,12 @@ const Logos3 = ({
                   className="flex basis-1/2 justify-center sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6"
                 >
                   <div className="flex shrink-0 items-center justify-center p-4">
-                    <img
+                    <Image
                       src={logo.image}
                       alt={logo.description}
+                      width={96}
+                      height={32}
+                      unoptimized
                       className={cn("h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300", logo.className)}
                     />
                   </div>

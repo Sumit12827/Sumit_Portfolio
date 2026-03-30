@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   Carousel,
   CarouselApi,
@@ -62,10 +63,13 @@ export const AnimatedCarousel = ({
               <CarouselContent>
                 {logoItems.map((logo, index) => (
                   <CarouselItem className={`basis-1/${itemsPerViewMobile} lg:basis-1/${itemsPerViewDesktop}`} key={index}>
-                    <div className={`flex rounded-md ${logoContainerWidth} ${logoContainerHeight} items-center justify-center p-4 hover:bg-accent transition-colors ${logoClassName}`}>
-                      <img
-                        src={typeof logo === 'string' ? logo : logo}
+                    <div className={`relative flex rounded-md ${logoContainerWidth} ${logoContainerHeight} items-center justify-center p-4 hover:bg-accent transition-colors ${logoClassName}`}>
+                      <Image
+                        src={logo}
                         alt={`Skill logo ${index + 1}`}
+                        fill
+                        unoptimized
+                        sizes="192px"
                         className={`${logoImageSizeClasses} object-contain filter brightness-0 dark:brightness-0 invert dark:invert`}
                       />
                     </div>

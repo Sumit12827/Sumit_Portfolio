@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
+import Image from 'next/image';
 import { Trophy, Code2, Layers, Cpu, Sparkles } from 'lucide-react';
 
 export default function About() {
@@ -64,9 +65,11 @@ export default function About() {
                   whileHover={{ scale: 1.02, rotate: -1 }}
                   transition={{ type: "spring", stiffness: 200, damping: 25 }}
                 >
-                  <img 
-                    src="/avatar.png" 
-                    alt="Sumit - Apple Swift Student Challenge Winner" 
+                  <Image
+                    src="/avatar.png"
+                    alt="Sumit - Apple Swift Student Challenge Winner"
+                    fill
+                    sizes="(max-width: 768px) 280px, 280px"
                     className="w-full h-full object-contain filter brightness-110 contrast-105"
                   />
                 </motion.div>
