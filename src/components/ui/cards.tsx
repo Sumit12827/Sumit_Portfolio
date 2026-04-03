@@ -62,3 +62,5 @@ const HoverRevealCards: React.FC<HoverRevealCardsProps> = ({
 };
 
 export default HoverRevealCards;
+// UI Component
+
