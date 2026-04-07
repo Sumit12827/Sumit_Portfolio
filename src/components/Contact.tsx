@@ -17,7 +17,7 @@ export const ContactSection = () => (
         Open to collaborations, internships, and interesting ideas.
       </p>
 
-      <a href="/resume.pdf" download className="inline-block mb-12">
+      <a href="https://drive.google.com/uc?export=download&id=19D_2tSZCINeyP-jJftIwbhid17Y2YnIO" className="inline-block mb-12" target="_blank" rel="noopener noreferrer">
         <LiquidButton size="xl" className="gap-3 text-base px-10">
           Download Resume
           <Download className="w-5 h-5" />
