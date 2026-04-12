@@ -49,25 +49,31 @@ export default function ScrollyCanvas({ children }: { children: React.ReactNode 
         FRAME_COUNT - 1,
         Math.max(0, Math.round(frameIndex.get()))
       );
-      
+
       const img = images[currentIndex];
       if (!img || !img.complete) return;
 
       const canvasRatio = canvas.width / canvas.height;
       const imgRatio = img.width / img.height;
-      
+
       let drawWidth = canvas.width;
       let drawHeight = canvas.height;
       let offsetX = 0;
       let offsetY = 0;
 
+      // Scale up by 25% to completely hide the large VEO watermark
+      const scale = 1.25;
+
       if (canvasRatio > imgRatio) {
-        drawHeight = canvas.width / imgRatio;
-        offsetY = (canvas.height - drawHeight) / 2;
+        drawWidth = canvas.width * scale;
+        drawHeight = (canvas.width / imgRatio) * scale;
       } else {
-        drawWidth = canvas.height * imgRatio;
-        offsetX = (canvas.width - drawWidth) / 2;
+        drawHeight = canvas.height * scale;
+        drawWidth = (canvas.height * imgRatio) * scale;
       }
+
+      offsetX = (canvas.width - drawWidth) / 2;
+      offsetY = (canvas.height - drawHeight) / 2;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
@@ -93,9 +99,9 @@ export default function ScrollyCanvas({ children }: { children: React.ReactNode 
     });
 
     if (images.length > 0 && images[0].complete) {
-        renderCanvas();
+      renderCanvas();
     } else if (images.length > 0) {
-        images[0].addEventListener('load', renderCanvas);
+      images[0].addEventListener('load', renderCanvas);
     }
 
     return () => {

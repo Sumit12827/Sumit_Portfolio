@@ -113,7 +113,7 @@ export default function About() {
             
             <div className="flex flex-col space-y-6 text-lg max-w-2xl">
               <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed font-light">
-                My journey into development hasn&apos;t been about just learning technologies — it&apos;s been about pushing boundaries, refining ideas, and turning concepts into polished digital experiences. From late-night debugging sessions to designing user-centric features, I&apos;ve consistently challenged myself to grow beyond the basics.
+                My development journey is driven by a passion to push boundaries and transform raw concepts into polished digital experiences. I constantly challenge myself to go beyond the basics, taking pride in turning complex problems into elegant, user-centric solutions.
               </motion.p>
               
               <motion.div variants={itemVariants} className="glass-card p-6 md:p-8 rounded-[1.5rem] border-l-4 border-l-blue-500 bg-gradient-to-r from-blue-500/10 to-transparent relative overflow-hidden group">
@@ -121,16 +121,12 @@ export default function About() {
                   <Code2 className="w-16 h-16 text-blue-300" />
                 </div>
                 <p className="text-foreground leading-relaxed font-medium relative z-10">
-                  I specialize in Swift and modern iOS development, with a strong emphasis on clean architecture, performance, and user experience. <span className="text-blue-200">I believe great products are not just built — they are carefully crafted with attention to detail at every level.</span>
+                  Specializing in Swift and modern iOS development, I focus on clean architecture, seamless UX, and high performance. <span className="text-blue-200">Great products aren&apos;t just built—they are meticulously crafted with attention to every detail.</span>
                 </p>
               </motion.div>
 
               <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed font-light">
-                Winning the Apple Swift Student Challenge has been a defining milestone in my journey, reinforcing my belief in building impactful solutions and thinking at a global level.
-              </motion.p>
-              
-              <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed font-light">
-                Currently, I&apos;m focused on creating applications that combine technology with education and real-world usability — aiming to deliver products that are not only functional, but genuinely valuable.
+                Winning the Apple Swift Student Challenge reinforced my vision: to build globally impactful applications. Today, I am focused on blending technology with real-world usability to create functional, high-quality products that deliver genuine value.
               </motion.p>
               
               <motion.div variants={itemVariants} className="pt-4">
