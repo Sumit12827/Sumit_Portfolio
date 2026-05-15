@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Sumit | 3D Portfolio Engineering
 
-## Getting Started
+  A high-performance, scroll-driven portfolio experience built with a focus on Deep Modules, Clean Architecture, and 120Hz-ready
+  interactions. This project serves as a showcase of technical rigor in both the iOS and Web ecosystems.
 
-First, run the development server:
+  !Next.js (https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+  !TypeScript (https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+  !Three.js (https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js)
+  !Framer Motion (https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer-motion&logoColor=bc44ad)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  🏗 Engineering Philosophy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  This codebase is governed by the principles of Defensive Craftsmanship and Strategic Programming:
+   - O(1) Clarity: Optimizing for the reader. Code is designed to be self-evident and maintainable.
+   - Complexity Budgeting: Hiding significant technical density behind simple, declarative APIs.
+   - The Trunk Test: Ensuring intuitive navigation and orientation through strict UX heuristics.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  🚀 Technical Highlights
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  1. Scroll-Driven Canvas Architecture
+  The core experience is powered by a custom ScrollyCanvas component that orchestrates a 75-frame sequence of high-fidelity
+  renders.
+   - Performance: Leverages requestAnimationFrame and framer-motion's useTransform for sub-pixel smooth interpolation.
+   - Optimization: Strategic preloading and canvas scaling to hide watermarks while maintaining 60+ FPS on mobile.
 
-## Learn More
+  2. Custom GLSL Shaders
+  The AnoAI component features a production-grade animated background powered by Three.js and raw GLSL.
+   - Simplex Noise & FBM: Implements Fractional Brownian Motion for an organic, aurora-like aesthetic.
+   - Zero Main-Thread Block: GPU-accelerated rendering ensures UI interactions remain fluid (16ms frame budget).
 
-To learn more about Next.js, take a look at the following resources:
+  3. Modern Tech Stack
+   - Framework: Next.js 14 (App Router)
+   - Styling: Tailwind CSS with custom Glassmorphism design tokens.
+   - Components: Radix UI Primitives for accessible, headless functionality.
+   - Motion: Framer Motion for parallax, physics-based springs, and view-triggered animations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  🛠 Setup & Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  Prerequisites
+   - Node.js 18.x or higher
+   - npm / yarn / pnpm
 
-## Deploy on Vercel
+  Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   1 git clone https://github.com/Sumit12827/portfolio3d.git
+   2 cd portfolio3d
+   3 npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  Development
+   1 npm run dev
+
+  Build for Production
+   1 npm run build
+
+  📜 Recognition
+   - Apple Swift Student Challenge Winner: Recognition for technical density and user-centric design in the Swift ecosystem.
+
+  🤝 Connect
+   - GitHub: @Sumit12827 (https://github.com/Sumit12827)
+   - LinkedIn: Connect with me (https://www.linkedin.com/in/sumit-375534294/)
+
+  ---
+  Built for Quality · Designed for Impact
