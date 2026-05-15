@@ -108,12 +108,12 @@ export default function About() {
             className="lg:col-span-7 flex flex-col justify-center space-y-8"
           >
             <motion.p variants={itemVariants} className="text-2xl md:text-3xl text-foreground/90 leading-snug font-medium tracking-tight">
-              I&apos;m a Computer Science student and iOS developer focused on building meaningful, production-grade applications that solve real problems.
+              I spend my time engineering digital systems where the architecture is as polished as the UI. I don&apos;t just write code—I manage complexity.
             </motion.p>
             
             <div className="flex flex-col space-y-6 text-lg max-w-2xl">
               <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed font-light">
-                My development journey is driven by a passion to push boundaries and transform raw concepts into polished digital experiences. I constantly challenge myself to go beyond the basics, taking pride in turning complex problems into elegant, user-centric solutions.
+                My process is a constant tug-of-war between high-level creativity and low-level rigor. I believe that a feature isn&apos;t done when it works; it&apos;s done when it can be understood by someone else in six months without an explanation.
               </motion.p>
               
               <motion.div variants={itemVariants} className="glass-card p-6 md:p-8 rounded-[1.5rem] border-l-4 border-l-blue-500 bg-gradient-to-r from-blue-500/10 to-transparent relative overflow-hidden group">
@@ -121,17 +121,17 @@ export default function About() {
                   <Code2 className="w-16 h-16 text-blue-300" />
                 </div>
                 <p className="text-foreground leading-relaxed font-medium relative z-10">
-                  Specializing in Swift and modern iOS development, I focus on clean architecture, seamless UX, and high performance. <span className="text-blue-200">Great products aren&apos;t just built—they are meticulously crafted with attention to every detail.</span>
+                  Winning the <span className="text-blue-200">Apple Swift Student Challenge</span> wasn&apos;t just about an app; it was about proving that I could build something technically dense that still feels effortless to use. 
                 </p>
               </motion.div>
 
               <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed font-light">
-                Winning the Apple Swift Student Challenge reinforced my vision: to build globally impactful applications. Today, I am focused on blending technology with real-world usability to create functional, high-quality products that deliver genuine value.
+                Today, I&apos;m focused on the sweet spot between Swift development and modern web stacks. I&apos;m the developer who cares about the `O(n)` of your search algorithm and the 16ms frame budget of your scroll animation.
               </motion.p>
               
               <motion.div variants={itemVariants} className="pt-4">
                 <p className="text-xl md:text-2xl text-foreground font-semibold inline-flex items-center gap-3">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">I&apos;m always looking to learn, improve, and build things that matter.</span>
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">I build tools for people, not just machines.</span>
                   <Cpu className="w-6 h-6 text-purple-400" />
                 </p>
               </motion.div>

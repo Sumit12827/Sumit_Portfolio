@@ -30,7 +30,7 @@ export const Footer = () => {
 
           {/* Center: Nav links */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            {["Home", "About", "Projects", "Contact"].map((link) => (
+            {["Home", "About", "Philosophy", "Projects", "Contact"].map((link) => (
               <a
                 key={link}
                 href={link === "Home" ? "#" : `#${link.toLowerCase()}`}
