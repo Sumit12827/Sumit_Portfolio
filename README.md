@@ -1,5 +1,5 @@
 Sumit | 3D Portfolio Engineering
-
+  
   A high-performance, scroll-driven portfolio experience built with a focus on Deep Modules, Clean Architecture, and 120Hz-ready
   interactions. This project serves as a showcase of technical rigor in both the iOS and Web ecosystems.
 
