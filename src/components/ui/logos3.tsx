@@ -118,6 +118,12 @@ const Logos3 = ({
       image: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
       className: "h-7 w-auto",
     },
+    {
+      id: "logo-16",
+      description: "Jira",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
+      className: "h-7 w-auto",
+    },
   ],
   direction = "forward",
   showHeading = true,
