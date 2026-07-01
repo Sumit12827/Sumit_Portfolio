@@ -12,14 +12,18 @@ const AnoAI = () => {
     
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+    // Cap pixel ratio to 1.5 — saves ~50% GPU fill-rate vs full Retina
+    const cappedDpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'low-power' });
+    renderer.setPixelRatio(cappedDpr);
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.appendChild(renderer.domElement);
 
     const material = new THREE.ShaderMaterial({
       uniforms: {
         iTime: { value: 0 },
-        iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
+        iResolution: { value: new THREE.Vector2(window.innerWidth * cappedDpr, window.innerHeight * cappedDpr) }
       },
       vertexShader: `
         void main() {
@@ -92,22 +96,41 @@ const AnoAI = () => {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
+    // Visibility-based animation — pause when offscreen to save GPU
     let frameId: number;
+    let isVisible = true;
+
     const animate = () => {
-      material.uniforms.iTime.value += 0.016;
-      renderer.render(scene, camera);
+      if (isVisible) {
+        material.uniforms.iTime.value += 0.016;
+        renderer.render(scene, camera);
+      }
       frameId = requestAnimationFrame(animate);
     };
+
+    // Use IntersectionObserver to detect visibility
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isVisible = entries[0]?.isIntersecting ?? true;
+      },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
     animate();
 
     const handleResize = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
-      material.uniforms.iResolution.value.set(window.innerWidth, window.innerHeight);
+      material.uniforms.iResolution.value.set(
+        window.innerWidth * cappedDpr,
+        window.innerHeight * cappedDpr
+      );
     };
     window.addEventListener('resize', handleResize);
 
     return () => {
       cancelAnimationFrame(frameId);
+      observer.disconnect();
       window.removeEventListener('resize', handleResize);
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
