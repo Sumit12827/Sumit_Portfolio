@@ -1,0 +1,166 @@
+import { ElementType } from "react";
+import { 
+  Atom, 
+  Code2, 
+  Box, 
+  Database, 
+  Figma, 
+  Flame, 
+  Github, 
+  GitMerge, 
+  Globe, 
+  Layers, 
+  Layout, 
+  Server, 
+  Terminal,
+  Zap,
+  Smartphone
+} from "lucide-react";
+
+export interface Skill {
+  id: string;
+  name: string;
+  level: "Beginner" | "Intermediate" | "Advanced" | "Expert";
+  description: string;
+  brandColor: string;
+  projectsCount: number;
+  icon: ElementType;
+}
+
+export const skillsData: Skill[] = [
+  {
+    id: "swiftui",
+    name: "SwiftUI",
+    level: "Expert",
+    description: "Building fluid, declarative, and high-performance native iOS interfaces with complex animations and state management.",
+    brandColor: "#007AFF",
+    projectsCount: 12,
+    icon: Smartphone,
+  },
+  {
+    id: "swift",
+    name: "Swift",
+    level: "Expert",
+    description: "Deep understanding of Swift's memory management, protocol-oriented programming, and concurrent systems (async/await).",
+    brandColor: "#F05138",
+    projectsCount: 15,
+    icon: Code2,
+  },
+  {
+    id: "realitykit",
+    name: "RealityKit",
+    level: "Advanced",
+    description: "Crafting immersive 3D AR experiences, spatial computing interfaces, and physics-based interactions for Apple platforms.",
+    brandColor: "#2A2A2A",
+    projectsCount: 4,
+    icon: Box,
+  },
+  {
+    id: "arkit",
+    name: "ARKit",
+    level: "Advanced",
+    description: "Leveraging computer vision, world tracking, and depth mapping to blend digital content with the physical world seamlessly.",
+    brandColor: "#00A8E8",
+    projectsCount: 5,
+    icon: Globe,
+  },
+  {
+    id: "react",
+    name: "React",
+    level: "Expert",
+    description: "Architecting scalable web applications using custom hooks, suspense, and modern React 18 concurrent features.",
+    brandColor: "#61DAFB",
+    projectsCount: 20,
+    icon: Atom,
+  },
+  {
+    id: "typescript",
+    name: "TypeScript",
+    level: "Advanced",
+    description: "Enforcing type safety, advanced generics, and robust system architecture across full-stack applications.",
+    brandColor: "#3178C6",
+    projectsCount: 18,
+    icon: Terminal,
+  },
+  {
+    id: "nodejs",
+    name: "Node.js",
+    level: "Advanced",
+    description: "Designing efficient RESTful APIs, event-driven microservices, and fast server-side logic.",
+    brandColor: "#339933",
+    projectsCount: 10,
+    icon: Server,
+  },
+  {
+    id: "express",
+    name: "Express.js",
+    level: "Advanced",
+    description: "Creating lightweight, scalable backend architectures with custom middleware and secure routing.",
+    brandColor: "#FFFFFF",
+    projectsCount: 8,
+    icon: Layers,
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+    level: "Intermediate",
+    description: "Structuring NoSQL databases, writing complex aggregation pipelines, and optimizing read/write queries.",
+    brandColor: "#47A248",
+    projectsCount: 6,
+    icon: Database,
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind CSS",
+    level: "Expert",
+    description: "Rapidly prototyping and building pixel-perfect, responsive, and accessible UI systems.",
+    brandColor: "#06B6D4",
+    projectsCount: 25,
+    icon: Layout,
+  },
+  {
+    id: "git",
+    name: "Git",
+    level: "Expert",
+    description: "Managing complex version control workflows, rebasing, and collaborating effectively in large teams.",
+    brandColor: "#F05032",
+    projectsCount: 30,
+    icon: GitMerge,
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    level: "Expert",
+    description: "Configuring CI/CD actions, code reviews, issue tracking, and maintaining open-source repositories.",
+    brandColor: "#FFFFFF",
+    projectsCount: 30,
+    icon: Github,
+  },
+  {
+    id: "figma",
+    name: "Figma",
+    level: "Advanced",
+    description: "Designing high-fidelity mockups, interactive prototypes, and scalable design systems before touching code.",
+    brandColor: "#F24E1E",
+    projectsCount: 14,
+    icon: Figma,
+  },
+  {
+    id: "vite",
+    name: "Vite",
+    level: "Advanced",
+    description: "Configuring blazing fast frontend tooling, optimizing build chunks, and managing dev environments.",
+    brandColor: "#646CFF",
+    projectsCount: 10,
+    icon: Zap,
+  },
+  {
+    id: "firebase",
+    name: "Firebase",
+    level: "Advanced",
+    description: "Integrating real-time databases, secure authentication, and cloud functions for rapid app deployment.",
+    brandColor: "#FFCA28",
+    projectsCount: 7,
+    icon: Flame,
+  },
+];

@@ -3,6 +3,7 @@
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { Trophy, Code2, Layers, Cpu, Sparkles } from 'lucide-react';
+import { SplitText } from '@/components/ui/split-text';
 
 export default function About() {
   const containerVariants: Variants = {
@@ -42,7 +43,7 @@ export default function About() {
             <Sparkles className="w-8 h-8 text-blue-400" />
           </div>
           <div className="flex-1">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">Behind the Code</h2>
+            <SplitText text="Behind the Code" className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-2" by="char" />
             <div className="h-[1px] w-full max-w-sm bg-gradient-to-r from-blue-500/50 to-transparent" />
           </div>
         </motion.div>

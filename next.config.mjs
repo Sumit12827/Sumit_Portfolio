@@ -10,6 +10,10 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'placeholder.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'images.unsplash.com',
+			},
 		],
 	},
 	// Aggressive caching for sequence frames — they're immutable assets
