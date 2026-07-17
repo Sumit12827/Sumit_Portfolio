@@ -7,8 +7,8 @@ import { Sparkles } from "lucide-react";
 export const SkillsSection = () => (
   <section id="skills" className="py-32 px-4 relative z-20 overflow-hidden">
     {/* Background Glows */}
-    <div className="absolute pointer-events-none top-1/4 right-0 w-[500px] h-[500px] bg-blue-500/8 rounded-full blur-[150px]" />
-    <div className="absolute pointer-events-none bottom-1/4 left-0 w-[400px] h-[400px] bg-purple-500/8 rounded-full blur-[120px]" />
+    <div className="absolute pointer-events-none top-1/4 right-0 w-[500px] h-[500px] bg-blue-500/[0.08] rounded-full blur-[150px]" />
+    <div className="absolute pointer-events-none bottom-1/4 left-0 w-[400px] h-[400px] bg-purple-500/[0.08] rounded-full blur-[120px]" />
 
     <div className="max-w-7xl mx-auto">
       <motion.div
